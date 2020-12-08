@@ -1,8 +1,7 @@
 from copy import deepcopy
 
-with open('day8/input.txt', 'r') as file:
-    _input = [x.strip() for x in file.readlines()]
-    _input = [x.split(" ") for x in _input]
+with open("day8/input.txt", "r") as file:
+    _input = [x.strip().split(" ") for x in file.readlines()]
 
 
 def run_boot_code(instructions):
@@ -17,7 +16,7 @@ def run_boot_code(instructions):
         elif ins[0] == "acc":
             i += 1
             accumulator += int(ins[1])
-        else:
+        elif ins[0] == "jmp":
             i += int(ins[1])
         if i >= len(instructions):
             return [accumulator, True]
