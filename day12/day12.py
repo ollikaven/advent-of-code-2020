@@ -1,9 +1,6 @@
 with open("day12/input.txt", "r") as file:
     _input = [x.strip() for x in file.readlines()]
 
-direction = 1.0
-s = [0, 0]
-
 
 def angle_to_direction(angle):
     return angle / 90 % 4
